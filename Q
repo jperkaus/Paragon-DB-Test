@@ -1,0 +1,8 @@
+import sqlite3
+conn = sqlite3.connect(
+c = conn.cursor(
+c.execute('''CREATE TABLE example_table (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
+c.execute('''CREATE TABLE example_table_2 (id INTEGER PRIMARY KEY, name TEXT, description Text, age INTEGER)''')
+c.execute('''CREATE TABLE example_table_3 (id INTEGER PRIMARY KEY, name TEXT, description TEXT, world INTEGER, Criteria TEXT, Critera2 TEXT, Criteria3 TEXT, maxparticipants INTEGER, time TEXT, basefailure INTEGER, failmodifier TEXT, othermodifier TEXT, outcomefail TEXT, outcome1 TEXT, outcome2 TEXT, outcome3 TEXT)''')
+c.execute("INSERT INTO example_table_3 VALUES (1, 'The Graceful Fall of the Paragon of Savagery', 'It has all lead to this young Paladin, the battle for High Va'Khyz rages on...survive at all costs', 9, 'LVL', 'Trait-Mythic', 'role-Paladin', 5, 'Timestamp from start', 95, 'Stat', 'Boost - Scepter of the first Seeker', 'Fail table X', 'XP', 'Loot Table X', 'Loot Table Y')")
+conn.commit(
